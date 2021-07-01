@@ -1,0 +1,35 @@
+// Grid
+//   Parent
+//   - display: grid | inline-grid
+//   - gap: [Row Gap] [Column Gap]
+//   - justify-content
+//   - align-content
+
+//   - grid-template-areas
+//   - grid-template: [grid-template-rows] / [grid-template-columns]
+//   - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+//   - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+//         => repeat(number of columns[rows], width[height])
+//         => repeat(auto-fill, minmax(200px, 1fr))
+//         => repeat(auto-fit, minmax(200px, 1fr))
+//         => CSS Grid Course: auto-fit vs auto-fill [https://youtu.be/uBFEryQY1fU]
+
+//   Child
+//   - grid-column: [Grid-Column-Start] / [Grid-Column-End]
+//   - grid-row: [Grid-Row-Start] / [Grid-Row-End] => Write Numbers only or span [numbers]
+//   - grid-area: [Grid-Row-Start] / [Grid-Column-Start] / [Grid-Row-End] / [Grid-Column-End]
+//   - grid-area: [grid-template-areas-name]
+//   - order: number or [-1 to get it in the first]
+
+@mixin parentGrid($display, $r-gap, $c-gap, $j-content, $a-content) {
+  display: $display;
+  gap: $r-gap $c-gap;
+  justify-content: $j-content;
+  align-content: $a-content;
+  // grid-template-columns
+  // grid-template-rows
+  // grid-template
+  // grid-template-areas
+}
+
+// @include parentGrid(grid, 10px, 10px, flex-start, flex-start);
