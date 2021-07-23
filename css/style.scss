@@ -30,6 +30,24 @@ body {
   margin: 0 auto;
 }
 
+section:target {
+  animation-name: my-highlight;
+  animation-iteration-count: 3;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes my-highlight {
+  0% {
+    background-color: rgba(255, 255, 0, 0.827);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.76);
+  }
+}
+
 /* Components */
 .special-heading {
   color: #ebeced;
@@ -135,8 +153,7 @@ body {
       content: "";
       border-width: 10px;
       border-style: solid;
-      border-color: transparent transparent var(--section-background)
-        transparent;
+      border-color: transparent transparent var(--section-background) transparent;
       position: absolute;
       right: 5px;
       top: -20px;
