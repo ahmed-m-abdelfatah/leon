@@ -32,9 +32,9 @@ body {
 
 section:target {
   animation-name: my-highlight;
-  animation-iteration-count: 3;
+  animation-iteration-count: 5;
   animation-duration: 1000ms;
-  animation-fill-mode: both;
+  animation-fill-mode: none;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
@@ -44,7 +44,7 @@ section:target {
     background-color: rgba(255, 255, 0, 0.827);
   }
   100% {
-    background-color: rgba(255, 255, 255, 0.76);
+    background-color: var(--section-background);
   }
 }
 
