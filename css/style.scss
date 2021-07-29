@@ -30,21 +30,23 @@ body {
   margin: 0 auto;
 }
 
-section:target {
-  animation-name: my-highlight;
-  animation-iteration-count: 5;
-  animation-duration: 1000ms;
-  animation-fill-mode: none;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-}
-
-@keyframes my-highlight {
-  0% {
-    background-color: rgba(255, 255, 0, 0.827);
+@media (max-width: 768px) {
+  section:target {
+    animation-name: my-highlight;
+    animation-iteration-count: 5;
+    animation-duration: 500ms;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   }
-  100% {
-    background-color: var(--section-background);
+
+  @keyframes my-highlight {
+    0% {
+      background-color: rgba(255, 115, 0, 0.747);
+    }
+    100% {
+      background-color: var(--section-background);
+    }
   }
 }
 
